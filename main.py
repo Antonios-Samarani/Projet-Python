@@ -1,7 +1,9 @@
 def lire(file_path : str) :
     with open(file_path, 'r') as file:
         for line in file:
-            yield line.strip()
+            a=line.strip()
+            if a:
+                yield a
 
 def lire_tout(file_path : list[str]) :
     for p in file_path:
