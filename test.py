@@ -1,3 +1,3 @@
 x = "Antonios"
 y ="Malek"
-z = "Tidian"
+z = "Tidiane"
