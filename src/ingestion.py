@@ -23,8 +23,7 @@ def parsing_des_log(line):
     rest = parts[4].split(" ", maxsplit=1)
     user_id = parts[5]
     message_content = parts[6]
-
-    
+    network_meta = (ip_address, 443, "HTTPS")
 
 
     return {
@@ -32,6 +31,12 @@ def parsing_des_log(line):
         "severity": severity,
         "ip": ip_address,
         "user_id": user_id,
-        
+        "message": message_content,
+        "network_meta": network_meta
     }
 
+
+def stream_parsed_logs(file_paths):
+    """Générateur d'ingestion principal."""
+    for line in lire_tout(file_paths):
+        yield lire(line)
