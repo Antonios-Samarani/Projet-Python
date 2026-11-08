@@ -1,10 +1,5 @@
-def lire(file_path : str) :
-    with open(file_path, 'r') as file:
-        for line in file:
-            a=line.strip()
-            if a:
-                yield a
+from src.ingestion import module_1
+import src.ingestion as i
+filepaths = ["exemple.txt"]
 
-def lire_tout(file_path : list[str]) :
-    for p in file_path:
-        yield from p.lire()
+print(list(module_1(filepaths)))

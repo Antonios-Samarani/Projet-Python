@@ -4,6 +4,7 @@ def lire(file_path : str) :
             a=line.strip()
             if a:
                 yield a
+                
 
 def lire_tout(file_path : list[str]) :
     for p in file_path:
@@ -12,7 +13,7 @@ def lire_tout(file_path : list[str]) :
 import json
 
 def parsing_des_log(line):
-    parts = line.split(" ", maxsplit=5)
+    parts = line.split(" ", maxsplit=4)
     
     if len(parts) < 5:
         return {"raw": line, "type": "malformed"}
