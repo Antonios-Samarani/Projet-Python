@@ -25,7 +25,10 @@ def parsing_des_log(line):
         user_id = rest[0]
     else :
         user_id = None
-    message_content = rest[1] if len(rest) > 1 else None
+    if len(rest) > 1:
+     message_content = rest[1]  
+    else :
+        message_content = None
     
     network_meta = (ip_address, 443, "HTTPS")
 
@@ -40,7 +43,6 @@ def parsing_des_log(line):
     }
 
 
-def stream_parsed_logs(file_paths):
-    """Générateur d'ingestion principal."""
+def module_1(file_paths):
     for line in lire_tout(file_paths):
-        yield lire(line)
+        yield parsing_des_log(line)
