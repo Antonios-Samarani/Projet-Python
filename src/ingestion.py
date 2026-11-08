@@ -7,7 +7,7 @@ def lire(file_path : str) :
 
 def lire_tout(file_path : list[str]) :
     for p in file_path:
-        yield from p.lire()
+        yield from lire(p)
 
 import json
 
@@ -17,12 +17,16 @@ def parsing_des_log(line):
     if len(parts) < 5:
         return {"raw": line, "type": "malformed"}
     
-    timestamp = f"{parts[0]} {parts[1]}"
+    timestamp = parts[0] + " " + parts[1]
     severity = parts[2]
     ip_address = parts[3]
     rest = parts[4].split(" ", maxsplit=1)
-    user_id = parts[5]
-    message_content = parts[6]
+    if len(rest) > 1 :
+        user_id = rest[0]
+    else :
+        user_id = None
+    message_content = rest[1] if len(rest) > 1 else None
+    
     network_meta = (ip_address, 443, "HTTPS")
 
 
