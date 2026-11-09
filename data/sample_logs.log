@@ -1,0 +1,11 @@
+2026-11-03 10:15:30 INFO 192.168.1.10 user_admin Connexion réussie
+2026-11-03 10:15:35 ERROR 10.0.0.50 user_john Échec d'authentification (mot de passe incorrect)
+2026-11-03 10:15:36 ERROR 10.0.0.50 user_john Échec d'authentification (mot de passe incorrect)
+2026-11-03 10:15:37 ERROR 10.0.0.50 user_john Échec d'authentification (mot de passe incorrect)
+2026-11-03 10:16:01 WARNING 192.168.1.15 user_guest Tentative d'accès non autorisé
+ligne cassée
+2026-11-03 10:16:05 ERROR 10.0.0.50 user_john Échec d'authentification (mot de passe incorrect)
+2026-11-03 10:16:06 ERROR 10.0.0.50 user_john Échec d'authentification (mot de passe incorrect)
+2026-11-03 10:17:00 INFO 192.168.1.10 user_admin Connexion réussie
+2026-11-03 10:17:10 ERROR 192.168.1.20 user_bob Échec d'authentification (mot de passe incorrect)
+2026-11-03 10:17:11 INFO 192.168.1.20 user_bob Connexion réussie

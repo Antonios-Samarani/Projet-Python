@@ -91,7 +91,7 @@ def bruteforce(tentatives):
     return ips_attaquantes, ips_sans_attaque
 
 # on appelle juste toutes les fonctons osef et on return un set avec toutes les infos qu'on cherchais pour se module
-def module3(records, blacklist=BLACKLIST, seuil=5):
+def module3(records, blacklist=BLACKLIST):
     ips_actives, ips_erreur, par_niveau, par_utilisateur, tentatives = collecter(records)
 
     resultat = {}
